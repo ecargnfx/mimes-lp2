@@ -93,6 +93,10 @@
     font-size: 1.2em;
     border: 2px solid #333;
     padding: 0.5em;
+    color: black;
+    &:hover {
+      border: 2px solid rgb(0, 195, 255);
+    }
   }  
 </style>
 
