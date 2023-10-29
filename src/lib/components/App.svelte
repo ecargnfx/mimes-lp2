@@ -17,17 +17,17 @@
   
   <div class="overlay-content">
     <div>
-      <div class='flex w-full flex-col justify-center p-5 text-center md:w-full md:text-center'>
-        <h1 class='my-4 text-5xl font-bold leading-tight text-center'>Animate Your World</h1>
-        <p class='mb-8 text-2xl leading-normal'>Easily Create 3D Characters and Scenes</p>
-      </div>
+      <div class='flex w-full flex-col justify-center p-0 sm:p-5 text-center md:w-full md:text-center mt-10 sm:mt-0'>
+        <h1 class='my-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center'>Animate Your World</h1>
+        <p class='mb-8 text-xl sm:text-2xl md:text-3xl leading-normal'>Easily Create 3D Characters and Scenes</p>
+      </div>      
     </div>
     <div class="mx-auto flex w-full flex-col flex-wrap items-center justify-center md:flex-row px-2 lg:w-4/5">
       <form action="https://api.web3forms.com/submit" method="POST">
   
         <input type="hidden" name="access_key" value="928aa7e4-7d32-42bc-a8c7-c82154345c8c" />
       
-        <div class="flex space-x-2"> <!-- Flex container -->
+        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2"> <!-- Responsive flex container -->
           <input
             class='border-2 border-gray-300 p-2 flex-1'
             type="text"
@@ -49,6 +49,7 @@
           type="submit">Sign Up for Beta Access</button>
       
       </form>
+      
      
     </div> 
   </div>  
@@ -86,7 +87,6 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    font-size: 3em;
   }  
 
   input {
