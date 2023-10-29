@@ -23,22 +23,22 @@
   </div>
 
 
-<style>
-  input {
-    font-size: 1.2em;
-    border: 2px solid #333;
-    padding: 0.5em;
-    color: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    background-color: rgba(13, 19, 32, 0.5);
-    &:hover {
-      outline: none;
-      cursor: default;
+  <style>
+    input {
+      font-size: 1.2em;
+      border: 2px solid #333;
+      padding: 0.5em;
+      color: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      bottom: max(5%, env(safe-area-inset-bottom)); /* Adjusted */
+      left: 50%;
+      transform: translateX(-50%); /* Adjusted */
+      border-radius: 5px;
+      background-color: rgba(13, 19, 32, 0.5);
+      &:hover {
+        outline: none;
+        cursor: default;
+      }
     }
-  }
-</style>
+  </style>
   
