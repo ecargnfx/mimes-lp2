@@ -1,7 +1,13 @@
 <script lang="ts">
   import { Canvas } from '@threlte/core'
   import Scene from './Scene.svelte'
-  import AutoText from './AutoText.svelte'
+  import AutoText from './AutoText.svelte';
+
+  const sentences = [
+    "a spiderman walking",
+    "a psychedelic old wizard walking",
+    "a princess casting a spell"
+  ];
   
 </script>
 
@@ -19,7 +25,7 @@
     <div>
       <div class='flex w-full flex-col justify-center p-0 sm:p-5 text-center md:w-full md:text-center mt-10 sm:mt-0'>
         <h1 class='my-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center'>Animate Your World</h1>
-        <p class='mb-8 text-xl sm:text-2xl md:text-3xl leading-normal'>Easily Create 3D Characters and Scenes</p>
+        <p class='mb-8 text-xl sm:text-2xl md:text-3xl leading-normal'>Create 3D Characters and Scenes with AI</p>
       </div>      
     </div>
     <div class="mx-auto flex w-full flex-col flex-wrap items-center justify-center md:flex-row px-2 lg:w-4/5">
@@ -53,7 +59,7 @@
      
     </div> 
   </div>  
-  <AutoText />  
+  <AutoText {sentences} /> 
 </div>
 
 

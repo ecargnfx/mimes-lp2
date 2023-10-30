@@ -1,7 +1,7 @@
 <script lang="ts">
   import { T, useFrame } from '@threlte/core'
   import { Grid, OrbitControls } from '@threlte/extras'
-  import Spiderman from '$lib/components/models/spiderman.svelte'
+  import CatWoman from '$lib/components/models/catwoman-karate.svelte'
   import Skyline from '$lib/components/models/skyline.svelte'
 
   let actions: any
@@ -97,7 +97,7 @@
   cellSize={2}
 />
 
-<Spiderman 
+<CatWoman 
   bind:actions
   {position}  
 />
