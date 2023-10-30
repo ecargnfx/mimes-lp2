@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { createEventDispatcher } from 'svelte';
 
   export let sentences = ['a spiderman walking']; // Default sentence
   let currentText = '';
@@ -8,6 +9,7 @@
 
   const typingSpeed = 100; // Speed of typing in milliseconds
   const pauseBetweenSentences = 2000; // Pause between sentences in milliseconds
+  const dispatch = createEventDispatcher();
 
   const typeText = () => {
     if (charIndex < sentences[index].length) {
@@ -24,6 +26,7 @@
     currentText = ''; // Clear the current text
     charIndex = 0; // Reset character index
     typeText(); // Start typing the next sentence
+    dispatch('typingFinished', sentences[index]); // Dispatch event when typing is finished
   };
 
   onMount(() => {

@@ -1,10 +1,15 @@
 <script lang="ts">
   import { T, useFrame } from '@threlte/core'
   import { Grid, OrbitControls } from '@threlte/extras'
-  import CatWoman from '$lib/components/models/catwoman-karate.svelte'
+  import Spiderman from '$lib/components/models/spiderman.svelte'
+  import Wizard from '$lib/components/models/wizard-color.svelte'
+  import Princess from '$lib/components/models/princess-spell.svelte'    
+  import CatWoman from '$lib/components/models/catwoman-karate.svelte'    
+  import Hulk from '$lib/components/models/hulk-filmnoir.svelte'  
   import Skyline from '$lib/components/models/skyline.svelte'
 
-  let actions: any
+  let actions: any;
+  export let currentCharacter = null; // Receive the current character as a prop
 
   // State variables for position and movement direction
   let position = [0, 1, 0];
@@ -97,8 +102,16 @@
   cellSize={2}
 />
 
-<CatWoman 
-  bind:actions
-  {position}  
-/>
+<!-- Conditionally render the character based on the currentCharacter prop -->
+{#if currentCharacter === 'Spiderman'}
+  <Spiderman bind:actions {position} />
+{:else if currentCharacter === 'Wizard'}
+  <Wizard bind:actions {position} />
+{:else if currentCharacter === 'Princess'}
+  <Princess bind:actions {position} />
+{:else if currentCharacter === 'CatWoman'}
+  <CatWoman bind:actions {position} />
+{:else if currentCharacter === 'Hulk'}
+  <Hulk bind:actions {position} />
+{/if}
 <Skyline/>

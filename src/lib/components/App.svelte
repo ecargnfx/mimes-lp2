@@ -6,9 +6,27 @@
   const sentences = [
     "a spiderman walking",
     "a psychedelic old wizard walking",
-    "a princess casting a spell"
+    "a princess casting a spell",
+    "a catwoman doing karate",
+    "a film noir hulk walking clumsily",
   ];
-  
+
+  let currentCharacter = null; // No default character
+
+  // Function to determine which character to show based on the sentence
+  function updateCharacter(sentence) {
+    if (sentence === "a spiderman walking") {
+      currentCharacter = 'Spiderman';
+    } else if (sentence === "a psychedelic old wizard walking") {
+      currentCharacter = 'Wizard';
+    } else if (sentence === "a princess casting a spell") {
+      currentCharacter = 'Princess';
+    } else if (sentence === "a catwoman doing karate") {
+      currentCharacter = 'CatWoman';
+    } else if (sentence === "a film noir hulk walking clumsily") {
+      currentCharacter = 'Hulk';
+    }
+  }
 </script>
 
 <div class = "canvas-container">
@@ -18,7 +36,7 @@
   
   
   <Canvas>
-    <Scene />
+    <Scene {currentCharacter} />
   </Canvas>
   
   <div class="overlay-content">
@@ -59,7 +77,7 @@
      
     </div> 
   </div>  
-  <AutoText {sentences} /> 
+  <AutoText {sentences} on:typingFinished={e => updateCharacter(e.detail)} />
 </div>
 
 
