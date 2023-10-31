@@ -43,20 +43,28 @@
 
 <div>
   <input type="text" value={currentText} readonly style="width: {calculateWidth(sentences[index])};" />
+  <p>Use W A S D keys to move the characters</p>
 </div>
 
 <style>
+  div {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  p {
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+  }
   input {
     font-size: 1.2em;
     border: 2px solid #333;
     padding: 0.5em;
     color: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
     border-radius: 5px;
     background-color: rgba(13, 19, 32, 0.5);
+    text-align: center;
     &:hover {
       outline: none;
       cursor: default;

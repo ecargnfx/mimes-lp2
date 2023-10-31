@@ -105,10 +105,10 @@
 <!-- Conditionally render the character based on the currentCharacter prop -->
 {#if currentCharacter === 'Spiderman'}
   <Spiderman bind:actions {position} />
-{:else if currentCharacter === 'Wizard'}
-  <Wizard bind:actions {position} />
 {:else if currentCharacter === 'Princess'}
   <Princess bind:actions {position} />
+{:else if currentCharacter === 'Wizard'}
+  <Wizard bind:actions {position} />
 {:else if currentCharacter === 'CatWoman'}
   <CatWoman bind:actions {position} />
 {:else if currentCharacter === 'Hulk'}
