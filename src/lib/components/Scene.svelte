@@ -67,7 +67,7 @@
   });
 
   $: {
-    console.log($actions)
+    // console.log($actions)
     $actions?.animation?.play()
   }
 </script>
